@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_img_upload"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="이미지 업로드" />
+
+            <Button
+                android:id="@+id/btn_bubble"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="버블"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/btn_pick_coordinate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="좌표 가져오기" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_x_coordinate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0" />
+
+                <TextView
+                    android:id="@+id/tv_y_coordinate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btn_picked_color"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="색 가져오기" />
+        </LinearLayout>
+
+
+        <ImageView
+            android:id="@+id/iv_image"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:scaleType="centerInside" />
+
+        <!--<ImageView-->
+            <!--android:id="@+id/iv_image_spot"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:padding="10dp"-->
+            <!--android:background="#f0f0"-->
+            <!--android:clickable="true"-->
+            <!--android:adjustViewBounds="true"-->
+            <!--android:scaleType="centerInside" />-->
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_images"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp" />
+
+
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_color"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_color_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:layout_marginTop="20dp"
+            android:background="#f0f0" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_color_total"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp" />
+    </LinearLayout>
+</ScrollView>
